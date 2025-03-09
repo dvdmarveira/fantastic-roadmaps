@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-Br">
 
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/style.css">
   <script defer src="/script.js"></script>
+  <script>document.documentElement.className += ' js'</script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
       <li><a href="#technologies">Technologies</a></li>
       <li><a href="#faq">Faq</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="https://dvdmarveira.netlify.app">Dev →</a></li>
+      <li><a href="https://dvdmarveira.netlify.app" target="_blank" rel="noopener noreferrer">About</a></li>
     </ul>
   </nav>
   <section class="grid-section technologies" id="technologies">
@@ -91,7 +92,7 @@
   </section>
   <section class="grid-section faq" id="faq">
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista">
+    <dl class="faq-lista js-accordion">
       <dt>Por que seguir a ordem recomendada?</dt>
       <dd>A ordem recomendada (1 - HTML, 2 - CSS, 3 - JavaScript, 4 - React, 5 - TypeScript, 6 - Next.js) faz sentido porque cada tecnologia depende da anterior:
         <p>HTML é a base estrutural da web.</p>

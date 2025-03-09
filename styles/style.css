@@ -117,6 +117,10 @@ body {
   cursor: pointer;
 }
 
+.technologies-lista li img {
+  margin-bottom: 60px;
+}
+
 .technologies-lista::-webkit-scrollbar {
   width: 18px;
 }
@@ -239,7 +243,7 @@ body {
   }
 }
 
-.js-tabcontent section {
+.js .js-tabcontent section {
   display: none;
 }
 
@@ -256,5 +260,34 @@ body {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+/*  */
+.js .js-accordion dd {
+  display: none;
+}
+
+.js-accordion dt::after {
+  content: "⮟";
+  margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+  content: "⮝";
+}
+
+.js-accordion dd.ativo {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
   }
 }
