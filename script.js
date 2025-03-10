@@ -1,3 +1,11 @@
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
+
 // NAVIGATION TAB
 function initTabNav() {
   const tabMenu = document.querySelectorAll(".js-tabmenu li");
@@ -29,8 +37,8 @@ function initAccordion() {
   const activeClass = "ativo";
 
   if (accordionList.length) {
-    accordionList[0].classList.add(activeClass);
-    accordionList[0].nextElementSibling.classList.add(activeClass);
+    // accordionList[0].classList.add(activeClass);
+    // accordionList[0].nextElementSibling.classList.add(activeClass);
 
     function activeAccordion() {
       this.classList.toggle(activeClass);

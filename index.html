@@ -11,8 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/style.css">
-  <script defer src="/script.js"></script>
-  <script>document.documentElement.className += ' js'</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -23,6 +22,21 @@
       <li><a href="#contact">Contact</a></li>
       <li><a href="https://dvdmarveira.netlify.app" target="_blank" rel="noopener noreferrer">About</a></li>
     </ul>
+  </nav>
+  <nav id="hamburger-nav" class="hamburger">
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="#technologies" onclick="toggleMenu()">Technologies</a></li>
+        <li><a href="#faq" onclick="toggleMenu()">Faq</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <li><a href="https://dvdmarveira.netlify.app" target="_blank" rel="noopener noreferrer" onclick="toggleMenu()">About</a></li>
+      </ul>
+    </div>
   </nav>
   <section class="grid-section technologies js-scroll" id="technologies">
     <h1 class="titulo">Fantastic Roadmaps</h1>
@@ -51,42 +65,129 @@
         <h2>HTML</h2>
         <p>É a linguagem de marcação usada para estruturar o conteúdo de páginas web, definindo elementos como textos, imagens e links.</p>
         <p>Alguns de seus principais conceitos:</p>
-        <p>Tags, Elementos, Atributos e Semântica.</p>
+        <ul>
+          <p>
+            <li>Tags</li>
+          </p>
+          <p>
+            <li>Elementos</li>
+          </p>
+          <p>
+            <li>Atributos</li>
+          </p>
+          <p>
+            <li>Semântica</li>
+          </p>
+        </ul>
       </section>
 
       <section>
         <h2>CSS</h2>
         <p>É a linguagem de estilos responsável por definir a aparência e o layout das páginas, permitindo personalização e responsividade (adaptação do website para diferentes tamanhos de tela).</p>
         <p>Alguns de seus principais conceitos:</p>
-        <p>Selectors, Box Model, Flexbox, Grid, Media Queries</p>
+        <ul>
+          <p>
+            <li>Selectors</li>
+          </p>
+          <p>
+            <li>Box Model</li>
+          </p>
+          <p>
+            <li>Flexbox</li>
+          </p>
+          <p>
+            <li>Grid</li>
+          </p>
+          <p>
+            <li>Media Queries</li>
+          </p>
+        </ul>
       </section>
 
       <section>
         <h2>JavaScript</h2>
         <p>É uma linguagem de programação que adiciona interatividade ao site, permitindo manipulação do DOM e execução de lógica no navegador.</p>
         <p>Alguns de seus principais conceitos:</p>
-        <p>Variáveis, Funções, Eventos, DOM, Arrays, Objetos.</p>
+        <ul>
+          <p>
+            <li>Variáveis</li>
+          </p>
+          <p>
+            <li>Funções</li>
+          </p>
+          <p>
+            <li>Eventos</li>
+          </p>
+          <p>
+            <li>DOM</li>
+          </p>
+          <p>
+            <li>Arrays</li>
+          </p>
+          <p>
+            <li>Objetos.</li>
+          </p>
+        </ul>
       </section>
 
       <section>
         <h2>React</h2>
         <p>É uma biblioteca JavaScript para criar interfaces dinâmicas e reutilizáveis, baseada no conceito de componentes e estado.</p>
         <p>Alguns de seus principais conceitos:</p>
-        <p> Componentes, Props, State, Hooks.</p>
+        <ul>
+          <p>
+            <li>Componentes</li>
+          </p>
+          <p>
+            <li>Props</li>
+          </p>
+          <p>
+            <li>State</li>
+          </p>
+          <p>
+            <li>Hooks</li>
+          </p>
+        </ul>
       </section>
 
       <section>
         <h2>TypeScript</h2>
         <p>É uma extensão do JavaScript que adiciona tipagem estática, tornando o código mais seguro e fácil de manter.</p>
         <p>Alguns de seus principais conceitos: </p>
-        <p>Types, Interfaces, Generics, Enums.</p>
+        <ul>
+          <p>
+            <li>Types</li>
+          </p>
+          <p>
+            <li>Interfaces</li>
+          </p>
+          <p>
+            <li>Generics</li>
+          </p>
+          <p>
+            <li>Enums</li>
+          </p>
+        </ul>
       </section>
 
       <section>
         <h2>Next.js</h2>
         <p>É um framework para React que otimiza o desenvolvimento de aplicações web, oferecendo renderização híbrida e melhorias de performance.</p>
         <p>Alguns de seus principais conceitos:</p>
-        <p> Páginas, SSR, API Routes, Static Generation.</p>
+        <ul>
+          <p>
+            <li>Páginas</li>
+          </p>
+          <p>
+            <li>SSR</li>
+          </p>
+          <p>
+            <li>API Routes</li>
+          </p>
+          <p>
+            <li>Static Generation</li>
+          </p>
+        </ul>
       </section>
     </div>
   </section>
@@ -95,34 +196,44 @@
     <dl class="faq-lista js-accordion">
       <dt>Por que seguir a ordem recomendada?</dt>
       <dd>A ordem recomendada (1 - HTML, 2 - CSS, 3 - JavaScript, 4 - React, 5 - TypeScript, 6 - Next.js) faz sentido porque cada tecnologia depende da anterior:
-        <p>HTML é a base estrutural da web.</p>
-        <p> CSS é responsável pela estilização e aparência.</p>
-        <p>JavaScript adiciona interatividade e lógica.</p>
-        <p>React depende de JavaScript para criar componentes reutilizáveis.</p>
-        <p> TypeScript melhora o JavaScript com tipagem estática, útil para projetos grandes.</p>
-        <p>Next.js é um framework baseado em React que otimiza a performance e a organização do código.</p>
+        <br />
+        <br />
+        <p><span>HTML</span> é a base estrutural da web.</p>
+        <p><span>CSS</span> é responsável pela estilização e aparência.</p>
+        <p><span>JavaScript</span> adiciona interatividade e lógica.</p>
+        <p><span>React</span> depende de JavaScript para criar componentes reutilizáveis.</p>
+        <p><span>TypeScript</span> melhora o JavaScript com tipagem estática, útil para projetos grandes.</p>
+        <p><span>Next.js</span> é um framework baseado em React que otimiza a performance e a organização do código.</p>
+        <br />
         <p>Seguir essa ordem ajuda a entender cada etapa e evita frustrações ao lidar com conceitos avançados antes da base.</p>
       </dd>
       <dt>Posso iniciar por React, TypeScript ou Next.js?</dt>
       <dd>Tecnicamente, sim, mas não é recomendado.
-        <p>React e Next.js exigem conhecimento prévio de HTML, CSS e JavaScript, pois são baseados nessas tecnologias.</p>
-        <p>TypeScript adiciona complexidade extra ao JavaScript, podendo dificultar o aprendizado se você ainda não dominar a linguagem base.</p>
+        <br />
+        <br />
+        <p><span>React</span> e <span>Next.js</span> exigem conhecimento prévio de HTML, CSS e JavaScript, pois são baseados nessas tecnologias.</p>
+        <p><span>TypeScript</span> adiciona complexidade extra ao JavaScript, podendo dificultar o aprendizado se você ainda não dominar a linguagem base.</p>
+        <br />
         Se você já tem experiência com programação, pode tentar aprender React diretamente, mas entender bem HTML, CSS e JavaScript primeiro tornará o aprendizado mais fluido.
       </dd>
       <dt>Qual a diferença entre biblioteca e framework?</dt>
       <dd>
-        <p>Uma biblioteca (exemplo: React) é um conjunto de funções que você pode usar livremente no seu código sem seguir uma estrutura rígida. Você decide como organizá-la no projeto.</p>
-        <p>Um framework (exemplo: Next.js) já impõe uma estrutura e regras para o desenvolvimento, oferecendo mais funcionalidades prontas e padronizadas.</p>
+        <p>Uma <span>biblioteca</span> (exemplo: React) é um conjunto de funções que você pode usar livremente no seu código sem seguir uma estrutura rígida. Você decide como organizá-la no projeto.</p>
+        <br />
+        <p>Um <span>framework</span> (exemplo: Next.js) já impõe uma estrutura e regras para o desenvolvimento, oferecendo mais funcionalidades prontas e padronizadas.</p>
+        <br />
         Em resumo, bibliotecas dão liberdade, enquanto frameworks fornecem uma estrutura mais definida.
       </dd>
       <dt>Quais exemplos de projetos são recomendados para iniciantes?</dt>
       <dd>Aqui estão algumas ideias, organizadas por nível de dificuldade:
-
-        <p>HTML + CSS: Página de portfólio, blog simples, landing page responsiva.</p>
-        <p>JavaScript: To-do list, calculadora, relógio digital, galeria de imagens interativa.</p>
-        <p>React: Lista de tarefas dinâmica, app de previsão do tempo com API, quiz interativo.</p>
-        <p>TypeScript: Aplicação CRUD (criar, ler, atualizar, deletar dados), agenda de contatos.</p>
-        <p>Next.js: Blog com CMS, e-commerce básico, dashboard de estatísticas.</p>
+        <br />
+        <br />
+        <p><span>HTML + CSS:</span> Página de portfólio, blog simples, landing page responsiva.</p><br />
+        <p><span>JavaScript:</span> To-do list, calculadora, relógio digital, galeria de imagens interativa.</p><br />
+        <p><span>React:</span> Lista de tarefas dinâmica, app de previsão do tempo com API, quiz interativo.</p><br />
+        <p><span>TypeScript:</span> Aplicação CRUD (criar, ler, atualizar, deletar dados), agenda de contatos.</p><br />
+        <p><span>Next.js:</span> Blog com CMS, e-commerce básico, dashboard de estatísticas.</p>
+        <br />
 
         Cada um desses projetos ajuda a reforçar conceitos fundamentais antes de avançar para algo mais complexo.
       </dd>
@@ -135,16 +246,17 @@
       <img src="/assets/img/mapa.jpg" alt="">
     </div> -->
     <ul class="dados">
-      <li><a href="https://www.linkedin.com/in/deyvidmarques/" target="_blank">LinkedIn</a></li>
-      <li><a href="https://github.com/dvdmarveira" target="_blank">Github</a></li>
-      <li>dvdmarveira@gmail.com</li>
-      <li>+55 (81) 98546-1063</li>
+      <li><a href="https://www.linkedin.com/in/deyvidmarques/" target="_blank" rel="noopener noreferrer"> <i class="bi bi-linkedin"></i>LinkedIn</a></li>
+      <li><a href="https://github.com/dvdmarveira" target="_blank" rel="noopener noreferrer"> <i class="bi bi-github"></i>Github</a></li>
+      <li><a href="mailto:dvdmarveira@gmail.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-envelope"></i>dvdmarveira@gmail.com</a></li>
     </ul>
   </section>
   <footer class="copyright">
     <p>Some rights reserved</p>
   </footer>
 
+  <script src="/script.js"></script>
+  <script>document.documentElement.className += ' js'</script>
 </body>
 
 </html>
