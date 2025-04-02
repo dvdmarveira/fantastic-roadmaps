@@ -6,6 +6,62 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
+// TECHNOLOGY MODAL
+document.addEventListener("DOMContentLoaded", () => {
+  const apiUrl = "http://localhost:3001/api";
+  const technologyModal = document.getElementById("technologyModal");
+  const technologyForm = document.getElementById("technologyForm");
+  const addTechnologyBtn = document.getElementById("addTechnologyBtn");
+  const modalTitle = document.getElementById("modalTitle");
+
+  const openAddTechnologyModal = () => {
+    editTechnologyId = null;
+    modalTitle.innerText = "Adicionar Tecnologia";
+    technologyForm.reset();
+    technologyModal.style.display = "block";
+  };
+
+  // Adicionar tecnologia
+  const addTechnology = async (technology) => {
+    await fetch(`${apiUrl}/technologies`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(technology),
+    });
+    // loadTechnologies();
+  };
+
+  technologyForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const technologyData = {
+      name: document.getElementById("name").value,
+      area: document.getElementById("area").value,
+      description: document.getElementById("description").value,
+    };
+    await addTechnology(technologyData);
+
+    technologyModal.style.display = "none";
+  });
+
+  // Fechar modal ao clicar no "x"
+  document.querySelector(".close").addEventListener("click", () => {
+    technologyModal.style.display = "none";
+  });
+
+  // Fechar modal ao clicar fora dele
+  window.addEventListener("click", (event) => {
+    if (event.target === technologyModal) {
+      technologyModal.style.display = "none";
+    }
+  });
+
+  // Inicializando o carregamento de usuários e eventos
+  addTechnologyBtn.addEventListener("click", openAddTechnologyModal);
+  // loadTechnologies();
+});
+
 // NAVIGATION TAB
 function initTabNav() {
   const tabMenu = document.querySelectorAll(".js-tabmenu li");

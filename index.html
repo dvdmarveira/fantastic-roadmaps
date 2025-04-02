@@ -42,6 +42,9 @@
   </nav>
   <section class="grid-section technologies js-scroll" id="technologies">
     <h1 class="titulo">Fantastic Roadmaps</h1>
+
+    <button id="addTechnologyBtn"><a href="#" title="Adicionar tecnologia"><i class="bi bi-plus-circle"></i>Tecnologia</a></button>
+
     <ul class="technologies-lista js-tabmenu">
       <li>
         <img src="/assets/img/image1.svg" alt="">
@@ -253,6 +256,42 @@
       <li><a href="mailto:dvdmarveira@gmail.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-envelope"></i>dvdmarveira@gmail.com</a></li>
     </ul>
   </section>
+
+  <!-- Modal para adicionar tecnologia -->
+  <div id="technologyModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-content-header">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle">Adicionar Tecnologia</h2>
+      </div>
+      <form id="technologyForm">
+        <div class="modalDiv">
+          <div class="lineFirst">
+            <div class="nameContent">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="areaContent">
+              <label for="area">Area</label>
+              <select id="area" name="area" required>
+                <option value="" selected disabled></option>
+                <option value="frontend">Front-end</option>
+                <option value="backend">Back-end</option>
+                <option value="fullstack">Full Stack</option>
+              </select>
+            </div>
+          </div>
+          <div class="lineSec">
+            <label for="description">Qual é o seu objetivo com essa tecnologia?</label>
+            <textarea id="description" name="description" required></textarea>
+
+          </div>
+        </div>
+        <button type="submit" id="saveTechnologyBtn"><a href="#">Salvar</a></button>
+      </form>
+    </div>
+  </div>
+
   <footer class="copyright">
     <p>Some rights reserved</p>
   </footer>
